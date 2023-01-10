@@ -1,6 +1,7 @@
 #!/usr/bin/python3
+message = "{:0=2d}"
 for num in range(100):
     if(num <= 98):
-        print("{:0=2d}".format(num), end=", ")
+        print(message.format(num), end=", ")
     else:
         print(99)
