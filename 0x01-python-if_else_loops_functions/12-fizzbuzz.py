@@ -10,5 +10,5 @@ def fizzbuzz():
         else:
             print("{}".format(i))
         if i < 100:
-            print(" ")
+            print(" ", end="")
     print(end="")
