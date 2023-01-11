@@ -7,3 +7,4 @@ def safe_print_division(a, b):
         quo = "None"
     finally:
         print("{}: {}".format(res, quo))
+        return quo
