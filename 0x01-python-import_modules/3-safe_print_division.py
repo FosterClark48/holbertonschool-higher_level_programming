@@ -6,4 +6,4 @@ def safe_print_division(a, b):
     except ZeroDivisionError:
         print("{:s}: None".format(quo))
     finally:
-        print("{:s}: {:d}".format(quo, result))
+        print("{:s}: {:f}".format(quo, result))
