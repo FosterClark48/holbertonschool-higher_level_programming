@@ -2,6 +2,6 @@
 def multiple_returns(sentence):
     leng = len(sentence)
     for i in str(leng):
-        if i == 0:
-            return None
+        #if i == 0:
+            #return None
         return leng
