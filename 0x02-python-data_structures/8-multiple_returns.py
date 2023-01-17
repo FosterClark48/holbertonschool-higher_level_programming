@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 def multiple_returns(sentence):
     st = ''.join(map(str, sentence))
+    print(st)
     leng = len(st)
     fir = st[0]
     for i in range(leng):
