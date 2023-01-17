@@ -3,6 +3,7 @@ def multiple_returns(sentence):
     st = ''.join(map(str, sentence))
     print(st)
     leng = len(st)
+    print(leng)
     fir = st[0]
     for i in range(leng):
         if i <= 0:
