@@ -4,4 +4,4 @@ def multiple_returns(sentence):
     for i in str(leng):
         #if i == 0:
             #return None
-        return leng
+        print(leng)
