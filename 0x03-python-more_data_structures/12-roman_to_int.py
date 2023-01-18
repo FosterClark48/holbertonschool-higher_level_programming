@@ -10,10 +10,9 @@ def roman_to_int(roman_string):
         "M": 1000
     }
     result = 0
+    if not roman_string:
+        return 0
     for i in roman_string:
         if i in my_dict:
-            if my_dict[i] < my_dict[roman_string[i + 1]]:
-                result -= my_dict[i]
-            else:
-                result += my_dict[i]
+            result += my_dict[i]
     return result
