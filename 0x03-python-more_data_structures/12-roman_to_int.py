@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
-    dict = {
+    my_dict = {
         "I": 1,
         "V": 5,
         "X": 10,
@@ -11,9 +11,9 @@ def roman_to_int(roman_string):
     }
     result = 0
     for i in roman_string:
-        if i in dict:
+        if i in my_dict:
             if roman_string[i] < roman_string[i + 1]:
-                sum -= dict[i]
+                sum -= my_dict[i]
             else:
-                sum += dict[i]
+                sum += my_dict[i]
     return result
