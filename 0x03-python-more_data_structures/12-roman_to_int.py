@@ -13,8 +13,8 @@ def roman_to_int(roman_string):
     if not roman_string:
         return 0
     for i in roman_string:
+        if i > 0 and my_dict[roman_string[i]] < my_dict[roman_string[i + 1]]:
+            result -= my_dict[i]
         if i in my_dict:
             result += my_dict[i]
-        if i > my_dict:
-            result -= my_dict[i]
     return result
