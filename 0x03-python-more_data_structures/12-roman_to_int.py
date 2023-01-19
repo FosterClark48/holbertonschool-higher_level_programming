@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
-    my_dict = {
+    rs = roman_string
+    val = {
         "I": 1,
         "V": 5,
         "X": 10,
@@ -10,11 +11,11 @@ def roman_to_int(roman_string):
         "M": 1000
     }
     result = 0
-    if not roman_string:
+    if not rs:
         return 0
-    for i in range(len(roman_string)):
-        if roman_string[i + 1] and my_dict[roman_string[i]] < my_dict[roman_string[i + 1]]:
-            result -= my_dict[i]
-        if i in my_dict:
-            result += my_dict[i]
+    for i in range(len(rs)):
+        if i + 1 < len(rs) and val[rs[i]] < val[rs[i + 1]]:
+            result -= val[rs[i]]
+        else:
+            result += val[rs[i]]
     return result
