@@ -4,73 +4,56 @@ Module: 0-add_integer
 Numbers
 =======
 
-``add_integer()`` returns the sum of its two arguments. It is
-equivalence of using the ``+`` operator
+``add_integer()`` returns the sum of its two arguments, which is
+equivalent to using the ``+`` operator
 
 ::
 
-import module:
     >>> add_integer = __import__('0-add_integer').add_integer
+    >>> add_integer(1, 2)
+    3
 
-two integers:
-    >>> add_integer(5, 3)
-    8
+    >>> add_integer(100, -2)
+    98
 
-two floats:
-    >>> add_integer(23.7, 8.9)
-    31
+    >>> add_integer(2)
+    100
 
-a as a float:
-    >>> add_integer(7.4, 6)
-    13
-
-b as a float:
-    >>> add_integer(3, 6.8)
-    9
-
-handling negative float:
-    >>> add_integer(-4.3, 2)
-    -2
+    >>> add_integer(100.3, -2)
+    98
 
 Non-Numbers
 ===========
 
-``add_integer`` is not defined for data types other than int and float,
-and should raise a ``TypeError`` upon recieving an invalid type.
+``add_integer()`` is not defined for data types other than int and float,
+and should raise a ``TypeError`` upon recieving an invalid type
 
 ::
 
-a as a "string":
-    >>> add_integer("one", 2)
+    >>> add_integer("one", 1)
     Traceback (most recent call last):
     TypeError: a must be an integer
 
-b as a "string":
-    >>> add_integer(2, "one")
+    >>> add_integer(1, "one")
     Traceback (most recent call last):
     TypeError: b must be an integer
 
-a as a [list]:
-    >>> add_integer([1, 2], 3)
+    >>> add_integer([1, 1], 1)
     Traceback (most recent call last):
     TypeError: a must be an integer
 
-b as None:
-    >>> add_integer(2, None)
-    Traceback (most recent call last):
-    TypeError: b must be an integer
-
-a as None:
     >>> add_integer(None, 1)
     Traceback (most recent call last):
     TypeError: a must be an integer
 
-infinite float:
+    >>> add_integer(1, None)
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+
     >>> add_integer(float('inf'), 3)
     Traceback (most recent call last):
     OverflowError: cannot convert float infinity to integer
 
-a as an expression:
     >>> add_integer(3 + 2j, 4)
     Traceback (most recent call last):
     TypeError: a must be an integer
@@ -79,25 +62,17 @@ Argument Number
 ===============
 
 ``add_integer()`` must recieve one or more arguments; Only the first two
-arguments are used.
+arguments are used
 
 ::
 
-No arguments:
+    >>> add_integer(2)
+    100
+
+    >>> add_integer(1, 1, 1)
+    Traceback (most recent call last):
+    TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+
     >>> add_integer()
     Traceback (most recent call last):
     TypeError: add_integer() missing 1 required positional argument: 'a'
-
-None as an argument:
-    >>> add_integer(None)
-    Traceback (most recent call last):
-    TypeError: a must be an integer
-
-1 argument:
-    >>> add_integer(1)
-    99
-
-3 arguments:
-    >>> add_integer(1, 2, 3)
-    Traceback (most recent call last):
-    TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
