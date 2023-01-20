@@ -1,10 +1,5 @@
 #!/usr/bin/python3
-"""
-This is the add_integer module.
-
-This module supplies one function, add_integer(),
-which adds together 2 int or float types and returns an int.
-"""
+"""This is the add_integer module."""
 
 
 def add_integer(a, b=98):
