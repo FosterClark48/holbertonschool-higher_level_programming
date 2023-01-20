@@ -56,6 +56,7 @@ a as a [list]:
     TypeError: a must be an integer
 
 b as None:
+    >>> add_integer(2, None)
     Traceback (most recent call last):
     TypeError: b must be an integer
 
