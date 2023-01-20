@@ -60,6 +60,21 @@ b as None:
     Traceback (most recent call last):
     TypeError: b must be an integer
 
+a as None:
+    >>> add_integer(None, 1)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+infinite float:
+    >>> add_integer(float('inf'), 3)
+    Traceback (most recent call last):
+    OverflowError: cannot convert float infinity to integer
+
+a as an expression:
+    >>> add_integer(3 + 2j, 4)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
 Argument Number
 ===============
 
