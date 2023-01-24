@@ -1,0 +1,59 @@
+The ``2-matrix_divided.py`` module
+==================================
+
+Using ``matrix_divided``
+-----------------------
+import module:
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+div is a integer:
+    >>> matrix_divided([[5, 3], [25, 12]], 4)
+    [[1.25, 0.75], [6.25, 3.0]]
+
+div is a string:
+    >>> matrix_divided([[5, 3], [25, 12]], '4')
+    Traceback (most recent call last):
+            ...
+    TypeError: div must be a number
+
+div is 0:
+    >>> matrix_divided([[5, 3], [25, 12]], 0)
+    Traceback (most recent call last):
+            ...
+    ZeroDivisionError: division by zero
+
+one list not is integer:
+    >>> matrix_divided([['5', 3], [25, 12]], 4)
+    Traceback (most recent call last):
+            ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+diference size of lists:
+    >>> matrix_divided([[5, 3, 1], [25, 12]], 4)
+    Traceback (most recent call last):
+            ...
+    TypeError: Each row of the matrix must have the same size
+
+div is inf:
+    >>> matrix_divided([[0, 0], [0, 0]], float('inf'))
+    [[0.0, 0.0], [0.0, 0.0]]
+
+matrix with inf and NaN:
+    >>> matrix_divided([[5, 3], [25, 12], [float('inf'), float('NaN')]], 4)
+    [[1.25, 0.75], [6.25, 3.0], [inf, nan]]
+
+matrix and div with inf NaN:
+    >>> matrix_divided([[5, 3], [25, 12], [float('inf'), float('NaN')]], float('inf'))
+    [[0.0, 0.0], [0.0, 0.0], [nan, nan]]
+
+one only argument:
+    >>> matrix_divided([[5, 3]])
+    Traceback (most recent call last):
+            ...
+    TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+without argument:
+    >>> matrix_divided()
+    Traceback (most recent call last):
+            ...
+    TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
