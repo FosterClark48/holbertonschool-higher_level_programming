@@ -2,7 +2,7 @@
 """
 This is the say_my_name module.
 
-The say_my_name module takes in a string
+The say_my_name module takes in a string and prints it.
 """
 
 
