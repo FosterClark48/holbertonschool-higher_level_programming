@@ -43,4 +43,4 @@ Types
 
 	>>> my_list = MyList()
 	>>> print(my_list.__doc__)
-	 Class that extends `list`
+	 Class that extends `list` class
