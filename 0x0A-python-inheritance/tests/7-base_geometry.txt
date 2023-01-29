@@ -19,7 +19,7 @@ Types
 
     >>> bg = BaseGeometry()
     >>> print(bg.__doc__)
-	 BaseGeometry class 
+     BaseGeometry class 
 
     >>> bg = BaseGeometry()
     >>> bg.integer_validator("my_int", 12)
