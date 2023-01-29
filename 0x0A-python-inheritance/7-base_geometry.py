@@ -5,9 +5,7 @@ This is the BaseGeometry class
 
 
 class BaseGeometry:
-    """ declaring empty class """
-    pass
-
+    """ BaseGeometry class """
     def area(self):
         """ Area method to raise Exception """
         raise Exception("area() is not implemented")
