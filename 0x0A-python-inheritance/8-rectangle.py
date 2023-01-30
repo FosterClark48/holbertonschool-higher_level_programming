@@ -2,12 +2,13 @@
 """
 This is the Rectangle class
 
-Rectangle class extends BaseGeometry class and 
+Rectangle class extends BaseGeometry class and
 raises an Error when required
 """
 
 
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
 
 class Rectangle(BaseGeometry):
     """Rectangle class extending BaseGeometry class"""
