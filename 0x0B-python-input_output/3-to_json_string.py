@@ -9,6 +9,7 @@ representation of an object (string)
 
 import json
 
+
 def to_json_string(my_obj):
     """Turns python string into json dict"""
     return json.dumps(my_obj)
