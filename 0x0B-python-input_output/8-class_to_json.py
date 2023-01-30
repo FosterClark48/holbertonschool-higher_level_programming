@@ -8,9 +8,6 @@ and boolean) for JSON serialization of an object
 """
 
 
-import json
-
-
 def class_to_json(obj):
     """Returns dict representation"""
     return obj.__dict__
