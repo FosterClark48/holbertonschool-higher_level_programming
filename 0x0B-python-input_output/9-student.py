@@ -1,11 +1,12 @@
 #!/usr/bin/python3
 """
-This is the class_to_json module
+This is the Student class
 
-The class_to_json module returns the dictionary description
-with simple data structure (list, dictionary, string, integer
-and boolean) for JSON serialization of an object
+The Student class defines a student by first & last name, & age.
+This class uses the to_json method which retrieves a dictionary
+representation of a Student instance
 """
+
 
 class Student:
     """Class that defines a Student"""
@@ -15,5 +16,5 @@ class Student:
         self.age = age
 
     def to_json(self):
-        """Returns dict representation"""
+        """Returns dict representation of Student"""
         return self.__dict__
