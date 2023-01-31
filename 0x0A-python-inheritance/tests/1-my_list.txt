@@ -16,26 +16,29 @@ Types
 
 ::
 
-    >>> my_list = MyList()
-    >>> my_list.append(1)
-    >>> my_list.append(2)
-    >>> my_list.append(3)
-    >>> my_list.append(4)
-    >>> my_list.append(5)
+    >>> len(__import__('1-my_list').__doc__) > 1
+    True
+    >>> len(__import__('1-my_list').MyList.__doc__) > 1
+    True
+    >>> len(__import__('1-my_list').MyList.print_sorted.__doc__) > 1
+    True
+    >>> print(MyList().__doc__)
+    Class that inherits from list
+    <BLANKLINE>
 
-    >>> print(my_list)
+Testing correct example:
+    >>> list = [1, 4, 2, 3, 5]
+    >>> MyList.print_sorted(list)
     [1, 2, 3, 4, 5]
 
-    >>> my_list.print_sorted()
-    [1, 2, 3, 4, 5]
+Testing single instance:
+    >>> list = [1]
+    >>> MyList.print_sorted(list)
+    [1]
 
-    >>> print(my_list)
-    [1, 4, 3, 2, 5]
-
-    >>> my_list = MyList([3, 3, 6, 1, -1, 0])
-
-    >>> print(my_list)
-    [3, 3, 6, 1, -1, 0]
-
-    >>> my_list.print_sorted()
-    [-1, 0, 1, 3, , 6]
+Testing incorrect example:
+    >>> list = ["hello", 1, 8, 10]
+    >>> MyList.print_sorted(list)
+    Traceback (most recent call last):
+    ...
+    TypeError: '<' not supported between instances of 'int' and 'str'
