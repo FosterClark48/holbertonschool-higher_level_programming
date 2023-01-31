@@ -13,40 +13,48 @@ class Rectangle(Base):
     """Rectangle class extending Base class"""
     def __init__(self, width, height, x=0, y=0, id=None):
         """Private initialization of class"""
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
         super().__init__(id)
 
     @property
     def width(self):
-        return self.width
+        """Private getter for width"""
+        return self.__width
 
     @width.setter
     def size(self, value):
-        self.width = value
+        """Private setter for width"""
+        self.__width = value
 
     @property
     def height(self):
-        return self.height
+        """Private getter for height"""
+        return self.__height
 
     @height.setter
     def size(self, value):
-        self.height = value
+        """Private setter for height"""
+        self.__height = value
 
     @property
     def x(self):
-        return self.x
+        """Private getter for x"""
+        return self.__x
 
     @x.setter
     def size(self, value):
-        self.x = value
+        """Private setter for x"""
+        self.__x = value
 
     @property
     def y(self):
-        return self.y
+        """Private getter for y"""
+        return self.__y
 
     @y.setter
     def size(self, value):
-        self.y = value
+        """Private setter for y"""
+        self.__y = value
