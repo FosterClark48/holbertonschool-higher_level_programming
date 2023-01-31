@@ -1,44 +1,41 @@
 =================
 Module: 1-my_list
 =================
-
 ``MyList(list)`` is a class that inherits from `list` and adds
 a `print_sorted()` method.
 
-Import
-======
-
-    >>> MyList = __import__('1-my_list').MyList
+	>>> MyList = __import__('1-my_list').MyList
 
 Types
 =====
 
-
 ::
 
-    >>> len(__import__('1-my_list').__doc__) > 1
-    True
-    >>> len(__import__('1-my_list').MyList.__doc__) > 1
-    True
-    >>> len(__import__('1-my_list').MyList.print_sorted.__doc__) > 1
-    True
-    >>> print(MyList().__doc__)
-    Class that inherits from list
-    <BLANKLINE>
+	>>> my_list = MyList()
+	>>> my_list.print_sorted()
+	[]
 
-Testing correct example:
-    >>> list = [1, 4, 2, 3, 5]
-    >>> MyList.print_sorted(list)
-    [1, 2, 3, 4, 5]
+	>>> my_list = MyList()
+	>>> my_list.append(1)
+	>>> my_list.print_sorted()
+	[1]
 
-Testing single instance:
-    >>> list = [1]
-    >>> MyList.print_sorted(list)
-    [1]
+	>>> my_list = MyList()
+	>>> my_list.extend([1, 4, 2, 3, 5])
+	>>> my_list.print_sorted()
+	[1, 2, 3, 4, 5]
 
-Testing incorrect example:
-    >>> list = ["hello", 1, 8, 10]
-    >>> MyList.print_sorted(list)
-    Traceback (most recent call last):
-    ...
-    TypeError: '<' not supported between instances of 'int' and 'str'
+	>>> my_list = MyList()
+	>>> my_list.extend([1, 2, 3, 4, 5])
+	>>> my_list.print_sorted()
+	[1, 2, 3, 4, 5]
+
+	>>> my_list = MyList()
+	>>> my_list.extend([1, 2, 3, "hi"])
+	>>> my_list.print_sorted()
+	Traceback (most recent call last):
+	TypeError: '<' not supported between instances of 'str' and 'int'
+
+	>>> my_list = MyList()
+	>>> print(my_list.__doc__)
+	 Class that extends `list` 
