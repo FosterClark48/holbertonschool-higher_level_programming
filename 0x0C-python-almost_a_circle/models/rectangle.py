@@ -22,39 +22,39 @@ class Rectangle(Base):
     @property
     def width(self):
         """returns value of attribute, width"""
-        return self.__width
+        return self.width
 
     @width.setter
     def size(self, value):
         """sets value of attribute"""
-        self.__width = value
+        self.width = value
 
     @property
     def height(self):
         """returns value of attribute, height"""
-        return self.__height
+        return self.height
 
     @height.setter
     def size(self, value):
         """sets value of attribute"""
-        self.__height = value
+        self.height = value
 
     @property
     def x(self):
         """returns value of attribute, x"""
-        return self.__x
+        return self.x
 
     @x.setter
     def size(self, value):
         """Private setter for x"""
-        self.__x = value
+        self.x = value
 
     @property
     def y(self):
         """return value of attribute, y"""
-        return self.__y
+        return self.y
 
     @y.setter
     def size(self, value):
         """sets value of attribute"""
-        self.__y = value
+        self.y = value
