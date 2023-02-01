@@ -35,3 +35,9 @@ class Base:
                 dict_list.append(obj.to_dictionary())
         with open(filename, "w", encoding="utf-8") as f:
             f.write(cls.to_json_string(dict_list))
+
+    def from_json_string(json_string):
+        """returns list of json str rep"""
+        if json_string is None or json_string == 0:
+            return ([])
+        return json.loads(json_string)
