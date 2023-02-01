@@ -79,16 +79,16 @@ class Rectangle(Base):
 
     def display(self):
         """Prints rectangle using #s"""
-        string = ""
-        if self.__width == 0 or self.__height == 0:
-            print(string)
+        for colum in range(self.y):
+            print()
 
         for i in range(self.__height):
+            for row in range(self.x):
+                print(" ", end="")
+
             for j in range(self.__width):
-                string += "#"
-            if i < self.__height - 1:
-                string += "\n"
-        print(string)
+                print("#", end="")
+            print()
 
     def __str__(self):
         """Returns str representation of Rectangle"""
