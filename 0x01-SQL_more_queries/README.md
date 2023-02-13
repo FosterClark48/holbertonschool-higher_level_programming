@@ -13,7 +13,9 @@
 - [MySQL Tutorial](https://www.youtube.com/watch?v=yPu6qV5byu4)
 - [SQL Style Guide](https://www.sqlstyle.guide)
 - [MySQL 8.0 SQL Statement Syntax](https://dev.mysql.com/doc/refman/8.0/en/sql-statements.html)
+
 Extra resources around relational database model design:
+
 - [Design](https://www.guru99.com/database-design.html)
 - [Normalization](https://www.guru99.com/database-normalization.html)
 - [ER Modeling](https://www.guru99.com/er-modeling.html)
