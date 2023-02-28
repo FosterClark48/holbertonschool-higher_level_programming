@@ -48,7 +48,7 @@ if __name__ == '__main__':
     if city_list:
         print(city_list)
     else:
-        print("No cities found for state {}".format(state_name))
+        print()
 
     """Close cursor and database connections"""
     cur.close()
