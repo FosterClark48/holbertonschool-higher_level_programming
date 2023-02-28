@@ -36,10 +36,11 @@ if __name__ == '__main__':
 
     """
     Execute SQL query using execute() method of cursor object.
-    Query selects all rows from states table in hbtn_0e_0_usa
-    database,sorted in ascending order by states.id.
+    Query selects all rows from states with a name starting with N
+    table in hbtn_0e_0_usa database,sorted in ascending order by states.id.
     """
-    cur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
+    cur.execute("SELECT * FROM states WHERE name LIKE BINARY 'N%'\
+                ORDER BY states.id ASC;")
 
     """
     Iterate over results w/ for loop and fetchall() method
