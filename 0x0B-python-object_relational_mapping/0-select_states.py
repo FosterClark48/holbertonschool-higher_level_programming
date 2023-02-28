@@ -1,15 +1,14 @@
 #!/usr/bin/python3
 """ Script that lists all states from database hbtn_0e_0_usa """
-
-"""Modules which we will use to get command line args"""
 import MySQLdb
 import sys
+"""Modules which we will use to get command line args"""
 
 """
 Makes sure that code is only executed if
 the script is run directly & not imported
 """
-if __name__=='__main__':
+if __name__ == '__main__':
     """
     Get the command line args for MySQL username, password,
     and database name. These arguments are passed in when
@@ -25,7 +24,7 @@ if __name__=='__main__':
     password, and database name that we got from command line args
     """
     db = MySQLdb.connect(host='localhost', port=3306,
-                        user=username, passwd=password, db=db_name)
+                         user=username, passwd=password, db=db_name)
 
     """
     Create a cursor object using cursor() method of the connection object
