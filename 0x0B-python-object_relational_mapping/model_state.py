@@ -13,6 +13,7 @@ This is necessary for SQLAlchemy's ORM to work properly
 """
 Base = declarative_base()
 
+
 """Define State class that represents table in database"""
 class State(Base):
     """Name of table in database"""
