@@ -35,11 +35,13 @@ if __name__ == '__main__':
     """
     Query first state object from db hbtn_0e_6_usa by state.id
     """
-    states = session.query(State).order_by(State.id).filter(State.id == 1)
+    states = session.query(State).order_by(State.id).first()
 
-    """Print results"""
-    for state in states:
-        print("{}: {}".format(state.id, state.name))
+    """If table states is exists, print Nothing"""
+    if states:
+        print("{}: {}".format(states.id, states.name))
+    else:
+        print("Nothing")
 
     """close session"""
     session.close()
