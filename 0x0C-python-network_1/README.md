@@ -1,27 +1,4 @@
-<style>
-    .resources ul, .required ul, .learn ul {
-        list-style: disc;
-        margin-left: 10px;
-    }
-    .resources li, .required li, .learn li {
-        margin-bottom: 5px;
-    }
-    .resources a, .required a {
-        color: red;
-    }
-    .tasks li {
-        margin-bottom: 5px;
-    }
-    .tasks h3 {
-        margin-bottom: 5px;
-    }
-    a:hover {
-        color: red;
-    }
-    .learn span, .required span {
-        color: red;
-    }
-</style>
+<link rel="stylesheet" type="text/css" href="styles/0-README.css">
 
 <img src="https://user-images.githubusercontent.com/105602291/224162963-3d1a36dc-ab21-4b02-9051-e4a74db80074.png" /><hr/>
 <h1>0x0C. Python - Network #1 &#x1F4F6</h1>
