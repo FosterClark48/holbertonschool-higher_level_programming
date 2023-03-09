@@ -1,8 +1,7 @@
 <link rel="stylesheet" type="text/css" href="styles/0-README.css">
 
-<div class="container">
-    <img src="https://user-images.githubusercontent.com/105602291/224162963-3d1a36dc-ab21-4b02-9051-e4a74db80074.png" /><hr/>
-</div>
+<img src="https://user-images.githubusercontent.com/105602291/224162963-3d1a36dc-ab21-4b02-9051-e4a74db80074.png" style="display: black; margin: auto;"/><hr/>
+
 <h1>0x0C. Python - Network #1 &#x1F4F6</h1>
     <h2>Resources &#x1F4DA</h2>
         <p><b>Read or watch:</b></p>
