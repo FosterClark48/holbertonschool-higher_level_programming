@@ -7,7 +7,7 @@ const integer = parseInt(input, 10);
 
 // Check if value is an int, if so, print message, if not, print other message
 if (Number.isInteger(integer)) {
-    console.log(`My number: ${integer}`);
+  console.log(`My number: ${integer}`);
 } else {
-    console.log("Not a number");
+  console.log('Not a number');
 }
