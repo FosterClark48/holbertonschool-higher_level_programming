@@ -21,6 +21,8 @@ request(apiURL, (error, response, body) => {
     // After the filter() function is done iterating over the movies array, it returns a new array containing only the movies where the condition in the arrow function is true.
     // By calling the .length property on the array it gives us the count of movies featuring Wedge Antilles.
     const numMoviesWithWedge = movies.filter(movie => movie.characters.includes(`http://swapi.co/api/people/${wedgeID}/`)).length;
-    console.log(numMoviesWithWedge);
+    const numMoviesWithWedge2 = movies.filter(movie => movie.characters.includes(`https://swapi-api.hbtn.io/api/people/${wedgeID}/`)).length;
+    const largerOutput = Math.max(numMoviesWithWedge, numMoviesWithWedge2);
+    console.log(largerOutput);
   }
 });
