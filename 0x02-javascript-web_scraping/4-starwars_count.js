@@ -6,7 +6,7 @@ const request = require('request');
 
 // Get the API URL from the first command line argument (process.argv[2]) and assign it to a variable api_url
 const apiURL = process.argv[2];
-const wedgeID = '18';
+const wedgeID = 18;
 
 // Make a GET request to the apiURL using request with a callback function that handles the response
 request(apiURL, (error, response, body) => {
