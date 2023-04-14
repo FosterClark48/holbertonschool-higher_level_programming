@@ -11,8 +11,8 @@ const wedgeID = '18';
 // Make a GET request to the apiURL using request with a callback function that handles the response
 request(apiURL, (error, response, body) => {
   if (error) {
-    console.error(`Error fetching API: ${error}`);
-    return;
+    console.error(error);
+    process.exit(1);
   }
 
   // Parse JSON response recieved in the body variable. .results property of parsed object is an array of movies
